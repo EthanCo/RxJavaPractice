@@ -1,10 +1,10 @@
-package cn.nbhope.rxjavapractice.create_oper;
+package cn.nbhope.rxjavapractice.base;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import cn.nbhope.rxjavapractice.BaseTest;
+import cn.nbhope.rxjavapractice.base.BaseTest;
 import rx.Observable;
 
 /**

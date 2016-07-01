@@ -1,4 +1,4 @@
-package cn.nbhope.rxjavapractice;
+package cn.nbhope.rxjavapractice.base;
 
 /**
  * @Description

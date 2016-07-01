@@ -1,4 +1,4 @@
-package cn.nbhope.rxjavapractice.create_oper;
+package cn.nbhope.rxjavapractice.oper.creating;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
@@ -24,6 +24,11 @@ public class Just extends Fragment {
     private ViewDataBinding binding;
     private TextView tvInfo;
 
+    public static Fragment newInstance() {
+        Just fragment = new Just();
+        return fragment;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,7 +40,7 @@ public class Just extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        Observable.just("just")
+        Observable.just(this.getClass().getSimpleName())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(response -> {

@@ -1,4 +1,4 @@
-package cn.nbhope.rxjavapractice;
+package cn.nbhope.rxjavapractice.base;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

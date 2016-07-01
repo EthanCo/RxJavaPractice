@@ -1,4 +1,4 @@
-package cn.nbhope.rxjavapractice;
+package cn.nbhope.rxjavapractice.utils;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -6,6 +6,8 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import cn.nbhope.rxjavapractice.BuildConfig;
 
 /**
  * Log

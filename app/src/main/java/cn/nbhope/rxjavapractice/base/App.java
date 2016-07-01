@@ -1,6 +1,8 @@
-package cn.nbhope.rxjavapractice;
+package cn.nbhope.rxjavapractice.base;
 
 import android.app.Application;
+
+import cn.nbhope.rxjavapractice.utils.T;
 
 /**
  * @Description Application
