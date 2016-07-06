@@ -15,6 +15,8 @@ import android.view.View;
 import cn.nbhope.rxjavapractice.base.BaseActivity;
 import cn.nbhope.rxjavapractice.oper.creating.Just;
 import cn.nbhope.rxjavapractice.oper.creating.Range;
+import cn.nbhope.rxjavapractice.oper.transforming.FlatMap;
+import cn.nbhope.rxjavapractice.oper.transforming.Map;
 
 public class HomeActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -87,9 +89,9 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         } else if (id == R.id.nav_gallery) {
             changeFragment(Range.newInstance(), "range", R.id.layout_container);
         } else if (id == R.id.nav_slideshow) {
-
+            changeFragment(Map.newInstance(), "map", R.id.layout_container);
         } else if (id == R.id.nav_manage) {
-
+            changeFragment(FlatMap.newInstance(), "flatMap", R.id.layout_container);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
