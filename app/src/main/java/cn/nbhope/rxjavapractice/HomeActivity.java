@@ -13,9 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.nbhope.rxjavapractice.base.BaseActivity;
-import cn.nbhope.rxjavapractice.oper.creating.Just;
 import cn.nbhope.rxjavapractice.oper.creating.Range;
 import cn.nbhope.rxjavapractice.oper.transforming.FlatMap;
+import cn.nbhope.rxjavapractice.oper.transforming.GroupBy;
 import cn.nbhope.rxjavapractice.oper.transforming.Map;
 
 public class HomeActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -85,7 +85,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            changeFragment(Just.newInstance(), "just", R.id.layout_container);
+            changeFragment(GroupBy.newInstance(), "Test", R.id.layout_container);
         } else if (id == R.id.nav_gallery) {
             changeFragment(Range.newInstance(), "range", R.id.layout_container);
         } else if (id == R.id.nav_slideshow) {
