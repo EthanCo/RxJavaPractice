@@ -14,7 +14,7 @@ import android.view.View;
 
 import cn.nbhope.rxjavapractice.base.BaseActivity;
 import cn.nbhope.rxjavapractice.oper.creating.Range;
-import cn.nbhope.rxjavapractice.oper.transforming.Cast;
+import cn.nbhope.rxjavapractice.oper.operators.toList;
 import cn.nbhope.rxjavapractice.oper.transforming.FlatMap;
 import cn.nbhope.rxjavapractice.oper.transforming.Map;
 
@@ -85,7 +85,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            changeFragment(Cast.newInstance(), "Test", R.id.layout_container);
+            changeFragment(toList.newInstance(), "Test", R.id.layout_container);
         } else if (id == R.id.nav_gallery) {
             changeFragment(Range.newInstance(), "range", R.id.layout_container);
         } else if (id == R.id.nav_slideshow) {
