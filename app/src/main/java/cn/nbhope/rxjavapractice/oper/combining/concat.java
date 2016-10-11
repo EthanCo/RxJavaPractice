@@ -60,18 +60,18 @@ public class concat extends Fragment {
                     public Long call(Object o) {
                         return -1L;
                     }
-                });
-
-
-        Observable<Long> observable2 = Observable.just(2L);
-
-        Observable.concat(observable1, observable2)
+                })
                 .filter(new Func1<Long, Boolean>() {
                     @Override
                     public Boolean call(Long aLong) {
-                        return aLong > 0;
+                        return aLong>0;
                     }
-                })
+                });
+
+
+        Observable<Long> observable2 = Observable.just(23L);
+
+        Observable.concat(observable1, observable2)
                 .first()
                 .subscribe(new Subscriber<Long>() {
                     @Override
