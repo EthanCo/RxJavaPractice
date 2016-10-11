@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.nbhope.rxjavapractice.base.BaseActivity;
+import cn.nbhope.rxjavapractice.oper.combining.concat;
 import cn.nbhope.rxjavapractice.oper.creating.Range;
 import cn.nbhope.rxjavapractice.oper.operators.retrywhen;
 import cn.nbhope.rxjavapractice.oper.transforming.FlatMap;
@@ -93,7 +94,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         } else if (id == R.id.nav_manage) {
             changeFragment(FlatMap.newInstance(), "flatMap", R.id.layout_container);
         } else if (id == R.id.nav_share) {
-
+            changeFragment(concat.newInstance(), "concat", R.id.layout_container);
         } else if (id == R.id.nav_send) {
 
         }
