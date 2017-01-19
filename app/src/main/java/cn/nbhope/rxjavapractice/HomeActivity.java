@@ -14,10 +14,10 @@ import android.view.View;
 
 import cn.nbhope.rxjavapractice.base.BaseActivity;
 import cn.nbhope.rxjavapractice.oper.combining.concat;
-import cn.nbhope.rxjavapractice.oper.creating.Range;
+import cn.nbhope.rxjavapractice.oper.operators.repeat;
+import cn.nbhope.rxjavapractice.oper.operators.repeatwhen;
+import cn.nbhope.rxjavapractice.oper.operators.retry;
 import cn.nbhope.rxjavapractice.oper.operators.retrywhen;
-import cn.nbhope.rxjavapractice.oper.transforming.FlatMap;
-import cn.nbhope.rxjavapractice.oper.transforming.Map;
 
 public class HomeActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -86,13 +86,13 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            changeFragment(retrywhen.newInstance(), "Test", R.id.layout_container);
+            changeFragment(retrywhen.newInstance(), "retrywhen", R.id.layout_container);
         } else if (id == R.id.nav_gallery) {
-            changeFragment(Range.newInstance(), "range", R.id.layout_container);
+            changeFragment(retry.newInstance(), "retry", R.id.layout_container);
         } else if (id == R.id.nav_slideshow) {
-            changeFragment(Map.newInstance(), "map", R.id.layout_container);
+            changeFragment(repeat.newInstance(), "repeat", R.id.layout_container);
         } else if (id == R.id.nav_manage) {
-            changeFragment(FlatMap.newInstance(), "flatMap", R.id.layout_container);
+            changeFragment(repeatwhen.newInstance(), "repeatwhen", R.id.layout_container);
         } else if (id == R.id.nav_share) {
             changeFragment(concat.newInstance(), "concat", R.id.layout_container);
         } else if (id == R.id.nav_send) {
