@@ -13,8 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.nbhope.rxjavapractice.base.BaseActivity;
+import cn.nbhope.rxjavapractice.oper.block.toBlocking;
 import cn.nbhope.rxjavapractice.oper.combining.concat;
-import cn.nbhope.rxjavapractice.oper.operators.repeat;
 import cn.nbhope.rxjavapractice.oper.operators.repeatwhen;
 import cn.nbhope.rxjavapractice.oper.operators.retry;
 import cn.nbhope.rxjavapractice.oper.operators.retrywhen;
@@ -90,7 +90,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         } else if (id == R.id.nav_gallery) {
             changeFragment(retry.newInstance(), "retry", R.id.layout_container);
         } else if (id == R.id.nav_slideshow) {
-            changeFragment(repeat.newInstance(), "repeat", R.id.layout_container);
+            changeFragment(toBlocking.newInstance(), "toBlocking", R.id.layout_container);
         } else if (id == R.id.nav_manage) {
             changeFragment(repeatwhen.newInstance(), "repeatwhen", R.id.layout_container);
         } else if (id == R.id.nav_share) {
